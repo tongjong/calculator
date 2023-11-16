@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background-color: #c9c7bf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: repeat(4, 4rem);
+  grid-template-rows: minmax(5rem, auto) repeat(5, 4rem);
+  text-align: center;
+  border: 2px solid #5e583a;
+  border-radius: 5px;
+  gap: 0.1rem;
+}
+
+.span-4 {
+  grid-column: span 4;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.row-span-2 {
+  grid-row: span 2;
+}
+
+button {
+  outline: none;
+  border: 1px solid #a89443;
+  border-radius: 3px;
+  background-color: #ccae29;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: rgba(242, 223, 138, 0.75);
+}
+
+.app > button:nth-last-child(1) {
+  grid-column: span 2;
+}
+
+#display {
+  grid-column: 1/-1;
+  background-color: rgba(105, 104, 102, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  padding: 0.2rem;
+  word-break: break-all;
+}
+
+#display .cur-operand {
+  color: white;
+  font-size: 1.6rem;
+}
+
+#display .pre-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+}
